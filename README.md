@@ -16,8 +16,8 @@ No analytical form of the distribution is assumed. A Generative Adversarial Netw
 ---
 
 ## Step 1: Data Transformation
-The original feature ( x ) (NO₂ concentration) is transformed into ( z ) using a roll-number-dependent non-linear function:
-z = x + a_r \sin(b_r x)
+The original feature ( x ) (NO₂ concentration) is transformed into (z) using a roll-number-dependent non-linear function:
+z = x + a_r sin(b_r x)
 
 Where:
 - Roll number ( r = 102303814 )
