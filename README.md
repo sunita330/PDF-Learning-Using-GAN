@@ -16,16 +16,13 @@ No analytical form of the distribution is assumed. A Generative Adversarial Netw
 ---
 
 ## Step 1: Data Transformation
-The original feature \( x \) (NO₂ concentration) is transformed into \( z \) using a roll-number-dependent non-linear function:
-
-\[
+The original feature ( x ) (NO₂ concentration) is transformed into ( z ) using a roll-number-dependent non-linear function:
 z = x + a_r \sin(b_r x)
-\]
 
 Where:
-- Roll number \( r = 102303814 \)
-- \( a_r = 0.05 \times (r \mod 7) = 0.20 \)
-- \( b_r = 0.3 \times (r \mod 5 + 1) = 1.5 \)
+- Roll number ( r = 102303814 )
+- ( a_r = 0.05 (r mod 7) = 0.20 )
+- ( b_r = 0.3 (r mod 5 + 1) = 1.5 )
 
 After transformation, the data is normalized for stable GAN training.
 
@@ -34,7 +31,7 @@ After transformation, the data is normalized for stable GAN training.
 ## Step 2: GAN Architecture
 
 ### Generator
-The generator maps Gaussian noise \( \epsilon \sim N(0,1) \) to the data space using fully connected layers with ReLU activation.
+The generator maps Gaussian noise ( epsilon sim N(0,1) ) to the data space using fully connected layers with ReLU activation.
 
 Architecture:
 - Dense(1 → 32)
@@ -92,3 +89,4 @@ This indicates that the GAN has successfully learned the underlying data distrib
 
 ## Conclusion
 The GAN successfully learns the probability density function of the transformed variable using data only, without assuming any parametric form.
+
